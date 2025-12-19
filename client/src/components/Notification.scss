@@ -1,0 +1,118 @@
+.notifications {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+
+  h2 {
+    margin-bottom: 20px;
+    color: #404145;
+  }
+
+  .loading {
+    text-align: center;
+    padding: 20px;
+    color: #1dbf73;
+    font-size: 16px;
+  }
+
+  .error {
+    text-align: center;
+    padding: 20px;
+    color: #ff4d4d;
+    font-size: 16px;
+    background: #fff0f0;
+    border-radius: 8px;
+  }
+
+  .no-notifications {
+    text-align: center;
+    padding: 20px;
+    color: #95979d;
+    font-size: 16px;
+    background: #f7f7f7;
+    border-radius: 8px;
+  }
+
+  .notification {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e4e5e7;
+
+    &.unread {
+      background: #f0f9ff;
+      border-left: 4px solid #1dbf73;
+      animation: pulse 2s infinite;
+    }
+
+    .notification-content {
+      margin-bottom: 15px;
+
+      p {
+        margin: 0;
+        color: #404145;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .time {
+        font-size: 12px;
+        color: #95979d;
+        margin-top: 5px;
+        display: block;
+      }
+    }
+
+    .notification-actions {
+      display: flex;
+      gap: 10px;
+
+      button {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: all 0.3s ease;
+
+        &:first-child {
+          background: #1dbf73;
+          color: white;
+
+          &:hover {
+            background: #19a463;
+          }
+        }
+
+        &:last-child {
+          background: #f7f7f7;
+          color: #404145;
+
+          &:hover {
+            background: #e4e4e4;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(29, 191, 115, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(29, 191, 115, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(29, 191, 115, 0);
+  }
+} 

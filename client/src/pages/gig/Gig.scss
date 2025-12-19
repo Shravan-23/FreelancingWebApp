@@ -1,0 +1,341 @@
+.gig {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 1400px;
+    padding: 30px 0px;
+    display: flex;
+    gap: 50px;
+
+    .left {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .breadcrumbs {
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 13px;
+        color: #555;
+      }
+
+      h1 {
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .pp {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        span {
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        .stars {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          .star-icon {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            
+            .filled {
+              color: #ffc108;
+            }
+            
+            .empty {
+              color: #e4e5e7;
+            }
+          }
+
+          span {
+            font-size: 14px;
+            font-weight: bold;
+            color: #ffc108;
+            margin-left: 5px;
+          }
+        }
+      }
+
+      .slider {
+        background-color: #F5F5F5;
+        img {
+          max-height: 500px;
+          object-fit: contain;
+        }
+      }
+
+      h2 {
+        font-weight: 400;
+      }
+
+      p {
+        font-weight: 300;
+        line-height: 25px;
+        color: #555;
+      }
+
+      .seller {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .user {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          .info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .stars {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+
+              img {
+                height: 14px;
+                width: 14px;
+              }
+
+              span {
+                font-size: 14px;
+                font-weight: bold;
+                color: #ffc108;
+              }
+            }
+
+            button {
+              background-color: white;
+              border-radius: 5px;
+              border: 1px solid gray;
+              padding: 10px;
+            }
+          }
+        }
+
+        .box {
+          border: 1px solid lightgray;
+          border-radius: 5px;
+          padding: 20px;
+          margin-top: 20px;
+
+          .items {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .item {
+              width: 300px;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              margin-bottom: 20px;
+
+              .title {
+                font-weight: 300;
+              }
+            }
+          }
+
+          hr {
+            height: 0;
+            border: 0.5px solid lightgray;
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      
+    }
+
+    .right {
+      flex: 1;
+      border: 1px solid lightgray;
+      padding: 20px;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      height: max-content;
+      max-height: 500px;
+      position: sticky;
+      top: 150px;
+
+      .price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h2{
+          font-weight: 300;
+        }
+
+        h3{
+          font-weight: 500;
+        }
+      }
+
+      p{
+        color: gray;
+        margin: 10px 0px;
+      }
+
+      .details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          img {
+            width: 20px;
+          }
+        }
+      }
+
+      .features{
+        .item{
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-weight: 300;
+          color: gray;
+          margin-bottom: 5px;
+
+          img{
+            width: 14px;
+          }
+        }
+      }
+
+      .error-message {
+        color: #e74c3c;
+        font-size: 14px;
+        text-align: center;
+        padding: 10px;
+        background-color: #fdf0ed;
+        border-radius: 4px;
+        border: 1px solid #fadbd8;
+      }
+
+      button {
+        background-color: #1dbf73;
+        padding: 10px;
+        color: white;
+        font-weight: 500;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 4px;
+        width: 100%;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #19a463;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.slider-container {
+  max-width: 100%;
+  margin: 20px 0;
+  
+  .carousel-initialized {
+    position: relative;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 500px;
+  }
+
+  .carousel-prev, .carousel-next {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    cursor: pointer;
+    border: 1px solid #e4e5e7;
+    
+    &:hover {
+      background: #f5f5f5;
+    }
+  }
+
+  .carousel-prev {
+    left: 10px;
+  }
+
+  .carousel-next {
+    right: 10px;
+  }
+
+  .carousel-dots {
+    bottom: -25px;
+    
+    li {
+      button {
+        &:before {
+          font-size: 10px;
+        }
+      }
+      
+      &.carousel-dots-active button:before {
+        color: #1dbf73;
+      }
+    }
+  }
+}
+
+.slider-fallback, .single-image {
+  max-width: 100%;
+  margin: 20px 0;
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 500px;
+    border-radius: 4px;
+  }
+}

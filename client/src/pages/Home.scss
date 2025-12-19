@@ -1,0 +1,23 @@
+.home {
+  .container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .notifications-section {
+      margin-bottom: 40px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      h1 {
+        font-size: 24px;
+        color: #404145;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e4e5e7;
+      }
+    }
+  }
+} 
